@@ -27,14 +27,20 @@ public class FalloutLawyer
     {
         String goodStats = "";
         int count = (s + p + e + c + i + a + l);
-        if (count != 28)
+        if (count == 28)
         {
-            goodStats = "Your current stats are not equal to the number of SPECIAL points given. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+            goodStats = "SPECIAL Stats:" + "\nStrength: " + s + "\nPerception: " + p + "\nEndurance: " + e + "\nCharisma: " + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
         }
-        else goodStats = "Strength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+        while (count != 28)
+        {
+            if (count != 28)
+            {
+                goodStats = "Your current stats are not equal to the number of SPECIAL points given. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+            }
+        }
         return goodStats;
     }
-    //need to add way to replace any of the stats and repeat loop, will check other classwork to see
+    //need to add way to replace stats if count != 28, loop as it is now is infinite
 
     public String caseName = "Dweller v Gray";
 
