@@ -24,25 +24,32 @@ public class LawyerRunner
 
         System.out.print("Enter SPECIAL stats (" + pointsLeft + " SPECIAL points available, each stat has a maximum value of ten)\nEnter your strength stat: ");
         int strength = s.nextInt();
+        clear();
         pointsLeft -= strength;
         System.out.print(pointsLeft + " points left.\nEnter your perception stat: ");
         int perception = p.nextInt();
         clear();
+        //clear works in vscode, use powershell as backup
         pointsLeft -= perception;
         System.out.print(pointsLeft + " points left.\nEnter your endurance stat: ");
         int endurance = e.nextInt();
+        clear();
         pointsLeft -= endurance;
         System.out.print(pointsLeft + " points left.\nEnter your charisma stat: ");
         int charisma = c.nextInt();
+        clear();
         pointsLeft -= charisma;
         System.out.print(pointsLeft + " points left.\nEnter your intelligence stat: ");
         int intelligence = i.nextInt();
+        clear();
         pointsLeft -= intelligence;
         System.out.print(pointsLeft + " points left.\nEnter your agility stat: ");
         int agility = a.nextInt();
+        clear();
         pointsLeft -= agility;
         System.out.print(pointsLeft + " points left.\nEnter your luck stat: ");
         int luck = l.nextInt();
+        clear();
         pointsLeft -= luck;
         //places each SPECIAL stat into an integer variable
 
@@ -61,5 +68,5 @@ public class LawyerRunner
         } catch (IOException | InterruptedException ex) {}
 
     }
-    //move this to its own class
+    //move this to its own class or FalloutLawyer.java
 }
