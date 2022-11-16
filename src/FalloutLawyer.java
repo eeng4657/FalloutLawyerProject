@@ -33,26 +33,15 @@ public class FalloutLawyer
         }
         while (count != 35)
         {
-            if (count != 35)
+            if (count != 35 || s>10 || p>10 || e>10 || c>10 || i>10 || a>10 || l>10)
             {
-                goodStats = "Your current stats are not equal to the number of SPECIAL points given. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+                goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
             }
         }
         return goodStats;
     }
     //need to add way to replace stats if count != 35, loop as it is now is infinite
 
-    public String caseDetail(int caseNum)
-    {
-        String caseDet = "";
-        if (caseNum == 1)
-        {
-            caseDet = "\nCase: Dweller v Moreau\nFacts of the Case: The Vault Dweller brings to the defendant Richard Moreau a claim of the Unity project, a plan to expose all remaining human survivors to the Forced Evolutionary Virus to turn them into super mutants united in a hivemind under Mr. Moreau, being an unreasonable and unjust plan for the future of the Wasteland.\nIssue: Will the Unity provide humanity with the best plan for survival in the wake of apocalypse?\nCourt Opinion: Undecided";
-        }
-        if (caseNum == 2)
-        {
-            caseDet = "\nCase: House v Courier\nFacts of the Case: Robert House";
-        }
-        return caseDet;
-    }
+    public String caseDetail = 
+    "\nCase: House v Courier\nFacts of the Case: Robert Edwin House";
 }
