@@ -27,17 +27,16 @@ public class FalloutLawyer
     {
         String goodStats = "";
         int count = (s + p + e + c + i + a + l);
-        if (count == 35)
+        boolean isGood = (count == 27 && s<=10 && p<=10 && e<=10 && c<=10 && i<=10 && a<=10 && l<=10);
+        if (isGood == true)
         {
             goodStats = "SPECIAL Stats:" + "\nStrength: " + s + "\nPerception: " + p + "\nEndurance: " + e + "\nCharisma: " + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
         }
-        while (count != 35)
+        if (isGood == false)
         {
-            if (count != 35 || s>10 || p>10 || e>10 || c>10 || i>10 || a>10 || l>10)
-            {
-                goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
-            }
-        }
+            goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+        } 
+        
         return goodStats;
     }
     //need to add way to replace stats if count != 35, loop as it is now is infinite

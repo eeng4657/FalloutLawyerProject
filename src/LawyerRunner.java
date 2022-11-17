@@ -21,38 +21,60 @@ public class LawyerRunner
         System.out.print("Enter name of player: ");
         String name = n.nextLine();
         //places name of lawyer into String variable
-        int pointsLeft = 35;
+        int pointsLeft = 27;
 
         System.out.print("Enter SPECIAL stats (" + pointsLeft + " SPECIAL points available, each stat has a maximum value of ten)\nEnter your strength stat: ");
-        int strength = s.nextInt();
+        int strength = 1;
+        int userS = s.nextInt();
+        strength += userS;
         clear();
-        pointsLeft -= strength;
+        pointsLeft -= userS;
+
         System.out.print(pointsLeft + " points left.\nEnter your perception stat: ");
-        int perception = p.nextInt();
+        int perception = 1;
+        int userP = p.nextInt();
+        perception += userP;
         clear();
-        //clear works in vscode, use powershell as backup
-        pointsLeft -= perception;
+        pointsLeft -= userP;
+
         System.out.print(pointsLeft + " points left.\nEnter your endurance stat: ");
-        int endurance = e.nextInt();
+        int endurance = 1;
+        int userE = e.nextInt();
+        endurance += userE;
         clear();
-        pointsLeft -= endurance;
+        pointsLeft -= userE;
+
         System.out.print(pointsLeft + " points left.\nEnter your charisma stat: ");
-        int charisma = c.nextInt();
+        int charisma = 1;
+        int userC = c.nextInt();
+        charisma += userC;
         clear();
-        pointsLeft -= charisma;
+        pointsLeft -= userC;
+
         System.out.print(pointsLeft + " points left.\nEnter your intelligence stat: ");
-        int intelligence = i.nextInt();
+        int intelligence = 1;
+        int userI = i.nextInt();
+        intelligence += userI;
         clear();
-        pointsLeft -= intelligence;
+        pointsLeft -= userI;
+
         System.out.print(pointsLeft + " points left.\nEnter your agility stat: ");
-        int agility = a.nextInt();
+        int agility = 1;
+        int userA = a.nextInt();
+        agility += userA;
         clear();
-        pointsLeft -= agility;
+        pointsLeft -= userA;
+
         System.out.print(pointsLeft + " points left.\nEnter your luck stat: ");
-        int luck = l.nextInt();
+        int luck = 1;
+        int userL = l.nextInt();
+        luck += userL;
         clear();
-        pointsLeft -= luck;
+        pointsLeft -= userL;
+
         //places each SPECIAL stat into an integer variable
+        //clear works in vscode, use powershell as backup
+        //put each stat selection in a loop to check if it is exceeding ten, make statChoice method only check if count exceeds 27
 
         System.out.println("\nName: " + house.lawyerName(name));
         System.out.println(house.statChoice(strength,perception,endurance,charisma,intelligence,agility,luck));
