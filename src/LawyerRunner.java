@@ -17,7 +17,8 @@ public class LawyerRunner
         Scanner l = new Scanner(System.in);
         //scanning for name, all SPECIAL stats, and case choice
 
-        System.out.print("Enter name: ");
+        clear();
+        System.out.print("Enter name of player: ");
         String name = n.nextLine();
         //places name of lawyer into String variable
         int pointsLeft = 35;
