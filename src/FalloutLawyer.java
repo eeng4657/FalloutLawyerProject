@@ -27,7 +27,7 @@ public class FalloutLawyer
     {
         String goodStats = "";
         int count = (s + p + e + c + i + a + l);
-        boolean isGood = (count == 27 && s<=10 && p<=10 && e<=10 && c<=10 && i<=10 && a<=10 && l<=10);
+        boolean isGood = (count == 28 && s<=10 && p<=10 && e<=10 && c<=10 && i<=10 && a<=10 && l<=10);
         if (isGood == true)
         {
             goodStats = "SPECIAL Stats:" + "\nStrength: " + s + "\nPerception: " + p + "\nEndurance: " + e + "\nCharisma: " + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;

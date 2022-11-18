@@ -21,7 +21,7 @@ public class LawyerRunner
         System.out.print("Enter name of player: ");
         String name = n.nextLine();
         //places name of lawyer into String variable
-        int pointsLeft = 27;
+        int pointsLeft = 28;
 
         System.out.print("Enter SPECIAL stats (" + pointsLeft + " SPECIAL points available, each stat has a maximum value of ten)\nEnter your strength stat: ");
         int strength = 1;
@@ -77,7 +77,7 @@ public class LawyerRunner
         //put each stat selection in a loop to check if it is exceeding ten, make statChoice method only check if count exceeds 27
 
         System.out.println("\nName: " + house.lawyerName(name));
-        System.out.println(house.statChoice(strength,perception,endurance,charisma,intelligence,agility,luck));
+        System.out.println(house.statChoice(userS,userP,userE,userC,userI,userA,userL));
         System.out.print(house.caseDetail);
     }
 
