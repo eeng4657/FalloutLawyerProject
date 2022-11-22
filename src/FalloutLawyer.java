@@ -27,11 +27,7 @@ public class FalloutLawyer
     {
         String goodStats = "";
         int count = (s + p + e + c + i + a + l);
-<<<<<<< HEAD
         boolean isGood = (count == 28);
-=======
-        boolean isGood = (count == 28 && s<=10 && p<=10 && e<=10 && c<=10 && i<=10 && a<=10 && l<=10);
->>>>>>> 409aab1306432db7744be727c0a33aa9338e59c7
         if (isGood == true)
         {
             goodStats = "SPECIAL Stats:" + "\nStrength: " + s + "\nPerception: " + p + "\nEndurance: " + e + "\nCharisma: " + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
@@ -40,7 +36,6 @@ public class FalloutLawyer
         {
             goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten. Your current stats are: \nStrength:" + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma:" + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
         } 
-        
         return goodStats;
     }
     //need to add way to replace stats if count != 35, loop as it is now is infinite
