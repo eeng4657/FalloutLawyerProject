@@ -29,6 +29,8 @@ public class LawyerRunner
         //scanning for name, all SPECIAL stats, and case choice
 
         clear();
+        String intro = new String("Welcome to Fallot Lawyer.");
+        System.out.println(intro.toString());
         System.out.print("Enter name of player: ");
         String name = n.nextLine();
         //places name of lawyer into String variable

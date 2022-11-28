@@ -1,3 +1,6 @@
+/**
+ * The FalloutLawyer class represents a lawyer in the situation of the game. This lawyer would have seven unique aspects to their character called SPECIAL stats, which decides how the game ends.
+ */
 public class FalloutLawyer
 {
     private int s;
@@ -8,20 +11,44 @@ public class FalloutLawyer
     private int a;
     private int l;
 
+    /**
+     * Constructor for the FalloutLawyer class. This creates a new instance of a lawyer. 
+     * Has no parameters, can be called without first defining the name of the player.
+     */
     public FalloutLawyer() {}
     
+    /**
+     * Counstructor for the FalloutLawyer class. This creates a new instance of a lawyer.
+     * @param n represents the name of the lawyer.
+     */
     public FalloutLawyer(String n) 
     {
         n = this.lawyerName(n);
     }
     // game can be initialized two ways, one with name as a parameter, and one without name
-
+    
+    /**
+     * String method for the FalloutLawyer class. This will contain the name of the lawyer.
+     * @param name stores the name of the player in a String.
+     * @return returns the name of the player as a String.
+     */
     public String lawyerName(String name)
     {
         return name;
     }
     //name of player character
-
+    
+    /**
+     * String method for the FalloutLawyer class. This will return a String accepting or rejecting the stat choice the player gives.
+     * @param s represents the Strength stat.
+     * @param p represents the Perception stat.
+     * @param e represents the Endurance stat.
+     * @param c represents the Charisma stat.
+     * @param i represents the Intelligence stat.
+     * @param a represents the Agility stat.
+     * @param l represents the Luck stat.
+     * @return returns a String either accepting the player's choice and printing the stats out in an easy to read format, or denying the player's SPECIAL stat choices.
+     */
     public String statChoice(int s,int p,int e,int c,int i,int a,int l) 
     {
         String goodStats = "";
@@ -33,15 +60,22 @@ public class FalloutLawyer
         }
         if (isBad == true)
         {
-            goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten. Your current stats are: \nStrength: " + s + "\nPerception: " + p + "\nEndurance: " + "\nCharisma: " + c + "\nIntelligence: " + i + "\nAgility: " + a + "\nLuck: " + l;
+            goodStats = "Your current stats are not equal to the number of SPECIAL points given and/or at least one of your stats exceed the limit of ten.";
         } 
         return goodStats;
     }
-    //need to add way to replace stats if count != 35, loop as it is now is infinite
-
+    
+    /**
+     * String method for the FalloutLawyer class. Prints out a String value documenting the name and details of the situation the player is placed in ingame.
+     */
     public String caseDetail = 
     "\nCase: House v Courier\nFacts of the Case: Robert Edwin House, founder of pre-war mega corporation RobCo, has been searching for a hard drive in the form of a platinum chip containing vital system upgrades for the computer that allows him to control the city of New Vegas and the Strip for over two centuries after the Great War rained nukes over the continental United States. The defendant, The Courier, was set to deliver it to Mr. House, but was apprehended by a gang looking to undermine Mr. House. After retrieving the chip back, the Courier now refuses to deliver the platinum chip, arguing that Mr. House should not remain in control of New Vegas.\n";
 
+    /**
+     * String method for the FalloutLawyer class. Determines if the player's luck stat is high enough to get a special ending.
+     * @param l represents the player's Luck stat.
+     * @return returns a String either resulting in the special ending if Luck stat is high enough, or returns an empty String, resulting in a different ending.
+     */
     public String riggedFromTheStart(int l)
     {
         String allIn = "";
@@ -71,6 +105,17 @@ public class FalloutLawyer
         return allIn;
     }
 
+    /**
+     * String method for the FalloutLawyer class. Determines the ending based on which stat is the highest.
+     * @param s represents the player's Strength stat.
+     * @param p represents the player's Perception stat.
+     * @param e represents the player's Endurance stat.
+     * @param c represents the player's Charisma stat.
+     * @param i represents the player's Intelligence stat.
+     * @param a represents the player's Agility stat.
+     * @param l represents the player's Luck stat.
+     * @return returns a String based on which of the SPECIAL stats is highest.
+     */
     public String caseResult(int s,int p,int e,int c, int i, int a,int l)
     {
         String result = "";
