@@ -17,7 +17,6 @@ public class LawyerRunner
     
     public static void main(String[] args)
     {
-        FalloutLawyer house = new FalloutLawyer();
 
         Scanner n = new Scanner(System.in);
         Scanner s = new Scanner(System.in);
@@ -34,6 +33,8 @@ public class LawyerRunner
         String name = n.nextLine();
         //places name of lawyer into String variable
         int pointsLeft = 28;
+
+        FalloutLawyer house = new FalloutLawyer(name);
 
         System.out.print("Enter SPECIAL stats (" + pointsLeft + " SPECIAL points available, each stat has a maximum value of ten)\nEnter your strength stat: ");
         int strength = 1;
@@ -133,8 +134,6 @@ public class LawyerRunner
         clear();
         pointsLeft -= userL;
         //places each SPECIAL stat into an integer variable
-        //clear works in vscode, use powershell as backup
-        //put each stat selection in a loop to check if it is exceeding ten, make statChoice method only check if count exceeds 27
 
         System.out.println("\nName: " + house.lawyerName(name));
         System.out.println(house.statChoice(strength,perception,endurance,charisma,intelligence,agility,luck));
